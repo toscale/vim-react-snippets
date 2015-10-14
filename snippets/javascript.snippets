@@ -1,5 +1,5 @@
 snippet cs
-	var cx = React.addons.classSet;
+	var cx = require('classnames');
 snippet cdm
 	componentDidMount: function() {
 		${1}
@@ -45,18 +45,14 @@ snippet gis
 snippet ism
 	isMounted()
 snippet jsx
-	/**
-	 * @jsx React.DOM
-	 */
-
 	var React = require('react');
 
 	var ${1:ClassName} = React.createClass({
 
 		render: function() {
-			return (
-				${0:<div />}
-			);
+			return <div>
+				${0:}
+			</div>;
 		}
 
 	});
@@ -70,17 +66,17 @@ snippet rcc
 	var ${1:ClassName} = React.createClass({
 
 		render: function() {
-			return (
-				${0:<div />}
-			);
+			return <div>
+				${0:}
+			</div>;
 		}
 
 	});
 snippet ren
 	render: function() {
-		return (
-			${1:<div />}
-		);
+		return <div>
+			${0:}
+		</div>;
 	}
 snippet sst
 	setState({
